@@ -1,0 +1,787 @@
+:root {
+    --color-negro-juantech: #010101;
+    --color-gris-oscuro-juantech: #333;
+    --color-gris-claro-juantech: #555;
+    --color-dorado-juantech: gold;
+    --color-blanco-juantech: #fff;
+  }
+
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.titulo_home {
+    background-color: var(--color-dorado-juantech);
+    color: var(--color-blanco-juantech);
+    padding: 20px;
+    text-align: center;
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    width: 100%;
+}
+
+@media only screen and (max-width: 767px) {
+    .titulo_home {
+        font-size: 1.5em;
+    }
+}
+
+
+ h1.listados-productos {
+    background-color: var(--color-dorado-juantech); 
+    color: var(--color-blanco-juantech); 
+    padding: 20px; 
+    text-align: center; 
+    margin: 0; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+
+    
+}
+
+@media only screen and (max-width: 767px) {
+    .listados-productos {
+        font-size: 1.5em; 
+    }
+}
+
+.destacados-text {
+    background-color: var(--color-gris-claro-juantech); 
+    color: var(--color-blanco-juantech);
+    padding: 10px;
+}
+
+::selection{
+    background-color:  var(--color-dorado-juantech); 
+}
+
+.home-section {
+    position: relative;
+}
+
+
+.imagen_header img{
+    width: 100%;
+    height: 10%;
+}
+
+.content {
+    padding: 20px;
+    text-align: center;
+    color: var(--color-blanco-juantech); 
+}
+
+
+
+.contenido_home {
+    text-align: center;
+    padding: 20px;
+    color: var(--color-blanco-juantech); 
+}
+
+.productos_destacados {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.productos_destacados img{
+    width: 60%;
+}
+
+.producto {
+    width: calc(33.33% - 20px);
+    margin: 10px;
+    box-sizing: border-box;
+}
+
+.producto img {
+    width: 100%;
+    height: auto;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+.producto p {
+    margin-top: 10px;
+    color: #aaa;
+}
+
+.producto:hover img {
+    transform: scale(1.2);  
+    transition: transform 0.3s ease;  
+}
+
+
+/* ESTILOS MENU JUANTECH */
+
+nav {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    background-color: var(--color-gris-oscuro-juantech);
+    padding: 10px 20px;
+}
+
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 100%;
+    height: auto;
+    max-width: 160px; 
+    margin-right: 20px; 
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav li {
+    position: relative;
+}
+
+nav a {
+    display: block;
+    color: var(--color-blanco-juantech);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+
+nav li.submenu:hover > ul {
+    display: flex;
+    flex-direction: column;
+    z-index: 200;
+}
+
+nav ul ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #000;
+    border: 1px solid #444;
+}
+
+nav li:hover {
+    background-color: var(--color-dorado-juantech);
+}
+
+/* Estilo para los submenús */
+nav ul ul li {
+    background-color: #000; 
+}
+
+nav ul ul li:hover {
+    background-color: rgb(224, 191, 3);
+}
+
+/* SUBMENU DE COMPONENTES */
+
+.submenu .submenu_componentes {
+    position: relative;
+}
+
+.submenu .submenu_componentes ul {
+    display: none;
+    left: 100%;
+    top: 0; /* Ajusta el valor según sea necesario */
+    padding: 0;
+    position: absolute;
+}
+
+.submenu .submenu_componentes:hover ul {
+    display: flex;
+    flex-direction: column;
+}
+
+.submenu .submenu_componentes:hover ul li {
+    width: 100%; 
+}
+
+/* ESTILO SUBMENU COMPONENTES*/
+.submenu .submenu_componentes:hover ul {
+    top: 0; 
+}
+
+/* Estilo SUBMENU  de DISCO DUROS y PROCESADORES */
+.submenu .submenu_componentes ul li.submenu-disco-duros,
+.submenu .submenu_componentes ul li.submenu-procesadores {
+    display: none;
+    position: relative;
+    left: 100%;
+    top: 0;
+}
+
+.submenu .submenu_componentes:hover ul li.submenu-disco-duros,
+.submenu .submenu_componentes:hover ul li.submenu-procesadores {
+    display: block;
+    position: relative;
+}
+
+
+
+/* FOOTER */
+footer {
+    background-color: var(--color-gris-oscuro-juantech);
+    color: var(--color-blanco-juantech);
+    padding: 20px;
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    width: 100%; 
+    margin-bottom: 20px; 
+}
+
+.footer-section {
+    text-align: center;
+}
+
+.column-section {
+    flex-direction: column; 
+}
+
+.footer-section h3 {
+    margin-bottom: 10px;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section li {
+    margin-bottom: 5px;
+}
+
+.footer-section a {
+    color: var(--color-blanco-juantech);
+    text-decoration: none;
+}
+
+.footer-section a:hover {
+    background-color: var(--color-dorado-juantech);
+}
+
+.footer-bottom {
+    text-align: center;
+}
+
+.footer-bottom hr {
+    width: 100%; 
+    margin: 10px 0; 
+}
+
+
+
+footer a:hover{
+    background-color: var(--color-dorado-juantech);
+}
+
+/* ESTILO LISTADOS PRODUCTOS */
+
+.producto {
+    width: calc(33.33% - 20px);
+    margin: 10px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.producto img {
+    width: 50%;
+    height: auto;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+/* Estilos imagenes de PRODUCTO */
+.producto img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.producto:hover img {
+    transform: scale(1.1);
+}
+
+
+.producto .nombre {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+p.precio {
+    margin-top: 5px;
+    font-size: 25px;
+    font-weight: bold;
+    color: #000000; 
+}
+
+
+
+.productos-section {
+    text-align: center;
+}
+
+.productos-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.producto {
+    width: calc(25% - 20px);
+    margin: 10px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+
+@media only screen and (max-width: 767px) {
+    .productos-list {
+        justify-content: center; 
+    }
+
+    .producto {
+        width: calc(50% - 20px);
+    }
+}
+
+
+.producto img {
+    width: 100%;
+    height: auto;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.producto:hover img {
+    transform: scale(1.1);
+    filter: brightness(1.2);
+}
+
+.producto .nombre {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.producto .precio {
+    margin-top: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #000000;
+}
+
+.producto a {
+    display: block;
+    margin-top: 10px;
+    background-color: var(--color-gris-oscuro-juantech);
+    color: var(--color-blanco-juantech);
+    padding: 8px;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.producto a:hover {
+    background-color: var(--color-gris-claro-juantech);
+}
+
+/* ESTILOS DE QUIENES SOMOS */
+
+.quienes-somos-section {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.quienes-somos-title {
+    color: var(--color-negro-juantech);
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.quienes-somos-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.subtitulo {
+    color: var(--color-dorado-juantech);
+    font-size: 1.8em;
+    margin-top: 20px;
+}
+
+.quienes-somos-content p {
+    color: var(--color-negro-juantech);
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+
+.quienes-somos-content h2 {
+    color: var(--color-dorado-juantech);
+    margin-top: 40px;
+}
+
+.quienes-somos-content h2.subtitulo:last-child {
+    margin-bottom: 40px;
+}
+
+
+
+/* CONTACTO */
+
+.contacto-section {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.contacto-title {
+    color: var(--color-negro-juantech);
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.contacto-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.introduccion {
+    color: var(--color-dorado-juantech);
+    font-size: 1.8em;
+    margin-top: 20px;
+}
+
+.contacto-content p {
+    color: var(--color-negro-juantech);
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* FORMULARIO */
+.contact-form {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.contact-form label {
+    color: var(--color-negro-juantech);
+    font-size: 1.2em;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid var(--color-gris-oscuro-juantech);
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.contact-form button {
+    background-color: var(--color-dorado-juantech);
+    color: var(--color-blanco-juantech);
+    padding: 10px 20px;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: var(--color-gris-oscuro-juantech);
+}
+
+
+
+/* Estilo para los enlaces dentro del contenido */
+.contacto-content a {
+    color: var(--color-dorado-juantech);
+    text-decoration: none;
+    border-bottom: 1px solid var(--color-dorado-juantech);
+    transition: border-bottom 0.3s ease;
+}
+
+.contacto-content a:hover {
+    border-bottom: 2px solid var(--color-dorado-juantech);
+}
+
+
+/* CARRITO  */
+
+.carrito {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+}
+
+.carrito img {
+    width: 30px;
+    height: auto;
+}
+
+.contador-carrito {
+    background-color: var(--color-dorado-juantech);
+    color: var(--color-blanco-juantech);
+    border-radius: 50%;
+    padding: 5px 10px;
+    font-size: 12px;
+    position: absolute;
+    top: -5px;
+    right: -5px;
+}
+
+
+/* BOTÓN AÑADIR CARRITO */
+.btn-anadir-carrito {
+    background-color: var(--color-dorado-juantech); 
+    color: var(--color-negro-juantech);
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-anadir-carrito:hover {
+    background-color: var(--color-gris-oscuro-juantech); 
+}
+
+.detalles-producto {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #fff; 
+    margin-top: 20px;
+}
+
+.imagen-amplia img {
+    width: 100%;
+    height: auto;
+}
+
+.imagen-amplia {
+    position: relative;
+    overflow: hidden;
+}
+
+.imagen-amplia img {
+    transition: transform 0.5s ease;
+}
+
+.imagen-amplia:hover img {
+    transform: scale(1.5);
+}
+
+
+.informacion {
+    flex: 1;
+    padding-left: 20px;
+}
+
+.informacion h1 {
+    font-size: 24px;
+    color: #333; 
+
+.precio {
+    font-size: 18px;
+    color: #e44d26;
+}
+
+.descripcion {
+    margin-top: 10px;
+    color: #555; 
+}
+
+.caracteristicas {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+}
+
+.caracteristicas li {
+    margin-bottom: 5px;
+    color: var(--color-gris-oscuro-juantech);
+}
+
+
+.imagen-amplia {
+    overflow: hidden;
+}
+
+.imagen-amplia img {
+    max-width: 100%;
+    transition: transform 0.3s ease-out;
+}
+
+.imagen-amplia:hover img {
+    transform: scale(1.2); 
+}
+
+.home-section {
+    width: 100%;
+    overflow: hidden;
+}
+
+
+
+
+.titulo_home {
+    margin-top: 10px; 
+}
+
+.contenido_home {
+    text-align: center;
+    padding: 20px;
+    color: var(--color-blanco-juantech);
+    margin-top: -10%; 
+}
+
+
+
+@media only screen and (max-width: 767px) {
+    .contenido_home {
+        margin-top: 0; 
+    }
+    
+    .titulo_home {
+        font-size: 1.5em; 
+    }
+    
+    .productos-list .producto {
+        width: calc(50% - 20px); 
+    }
+    
+}
+
+}
+
+
+/* PÁGINA DEL CARRITO DE COMPRAS */
+
+
+body.carrito {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--color-blanco-juantech);
+    color: var(--color-negro-juantech);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh; 
+    margin: 0;
+}
+
+
+
+h1#titulo_carrito {
+    margin-bottom: 20px;
+}
+
+
+
+
+.producto-carrito:hover {
+    transform: scale(1.05);
+}
+
+
+
+
+
+.comprar-ahora,
+.vaciar-carrito {
+    background-color: var(--color-dorado-juantech);
+    color: var(--color-negro-juantech);
+    border: none;
+    padding: 15px 30px;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+.comprar-ahora:hover,
+.vaciar-carrito:hover {
+    background-color: var(--color-gris-oscuro-juantech);
+}
+
+
+
+/* PÁGINA DE GRACIAS */
+body.gracias {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--color-blanco-juantech);
+    color: var(--color-negro-juantech);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh; 
+    margin: 0;
+}
+
+.gracias-container {
+    width: 80%; 
+    margin: auto;
+    text-align: center;
+    padding: 20px;
+}
+
+.titulo-gracias {
+    margin-bottom: 20px;
+}
+
+.mensaje-gracias {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.seguir-navegando {
+    background-color: var(--color-dorado-juantech); 
+    color: var(--color-negro-juantech);
+    text-decoration: none;
+    padding: 15px 30px;
+    font-size: 18px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.seguir-navegando:hover {
+    background-color: var(--color-gris-oscuro-juantech); 
+}
+
+
+
+
+
+
+
