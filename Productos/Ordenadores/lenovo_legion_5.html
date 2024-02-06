@@ -74,7 +74,17 @@
         <button class="btn-anadir-carrito" data-producto="Lenovo Legion 5 15IAH7H">Añadir al carrito</button>
     </div>
 </div>
-    
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const carrito = document.querySelector('.carrito');
+
+        carrito.addEventListener('click', function () {
+            window.location.href = '../../carrito.html';
+        });
+    });
+</script>
+
 
 <footer>
     <div class="footer-content">

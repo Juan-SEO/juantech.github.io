@@ -73,10 +73,17 @@
             </div>
         </div>
     
-        <!-- Tu pie de página aquí -->
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                const carrito = document.querySelector('.carrito');
+        
+                carrito.addEventListener('click', function () {
+                    window.location.href = '../../carrito.html';
+                });
+            });
+        </script>
     
-        <!-- Scripts -->
-        <script src="script.js"></script>
+       
 
 
         <footer>
