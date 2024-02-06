@@ -34,13 +34,7 @@ carrito.addEventListener('click', function () {
     });
 });
 
-carrito.addEventListener('click', function () {
-    // Verifica si la aplicación se está ejecutando en GitHub Pages o localmente
-    const baseURL = window.location.hostname === 'juan-seo.github.io' ? '/juantech.github.io/' : '';
 
-    // Utiliza la ruta completa incluyendo el nombre del repositorio
-    window.location.href = baseURL + 'carrito.html';
-});
 
 document.addEventListener('DOMContentLoaded', function () {
     mostrarProductosSeleccionados();
