@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 carrito.addEventListener('click', function () {
-        window.location.href = 'carrito.html';
+        window.location.href = '/carrito.html';
     });
 });
 
